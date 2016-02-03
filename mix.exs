@@ -39,6 +39,7 @@ defmodule Tuxedo.Mixfile do
     [{:comeonin, "~> 2.0"},
      {:cowboy, "~> 1.0"},
      {:gettext, "~> 0.9"},
+     {:guardian, "~> 0.9.0"},
      {:phoenix, "~> 1.1.0"},
      {:phoenix_ecto, "~> 2.0"},
      {:phoenix_html, "~> 2.3"},
