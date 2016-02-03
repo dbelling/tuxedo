@@ -19,7 +19,7 @@ defmodule Tuxedo.Router do
     get "*path", PageController, :index
   end
 
-  scope "/api", PhoenixTrello do
+  scope "/api", Tuxedo do
     pipe_through :api
 
     scope "/v1" do
