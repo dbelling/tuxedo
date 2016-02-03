@@ -4,8 +4,15 @@
 /deps
 /*.ez
 
+# Node.js modules
+/node_modules/
+
 # Generate on crash by the VM
 erl_crash.dump
+
+# Static private files
+priv/static/css/
+priv/static/js/
 
 # The config/prod.secret.exs file by default contains sensitive
 # data and you should not commit it into version control.
