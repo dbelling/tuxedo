@@ -1,6 +1,10 @@
 defmodule Tuxedo.Router do
   use Tuxedo.Web, :router
 
+  pipeline :api do
+    plug :accepts, ["json"]
+  end
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -13,5 +17,13 @@ defmodule Tuxedo.Router do
     pipe_through :browser # Use the default browser stack
 
     get "*path", PageController, :index
+  end
+
+  scope "/api", PhoenixTrello do
+    pipe_through :api
+
+    scope "/v1" do
+      post "/registrations", RegistrationController, :create
+    end
   end
 end
